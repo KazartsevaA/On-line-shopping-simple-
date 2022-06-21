@@ -525,3 +525,84 @@ FEATURED ITEMS TYPOGRAPHY
     font-size: 1rem;
     color: #F16D7F;
 }
+
+.brouse_products {
+    margin-top: 3.93em;
+    background: #F16D7F;
+    border: 1px solid #FF6A6A;
+    color: #fff;
+    font-size: 16px;
+    padding: .87em 2.37em; 
+}
+
+/*--------------------------
+BENEFITS LAYOUT
+---------------------------*/
+
+.benefits_wrapper {
+    background-color: #222222;
+    margin-top: 6.81em;
+}
+
+.container_benefits {
+    display: flex;
+    justify-content: space-between;
+    height: 341px;
+    align-items: center;
+}
+
+.block_benefits {
+    text-align: center;
+    width: 25%;
+}
+
+/*--------------------------
+BENEFITS TYPOGRAPHY
+---------------------------*/
+
+.benefits_title {
+    font-size: 19px;
+    color: #FBFBFB;
+    margin-top: 1.18em;
+}
+
+.benefits_text {
+    font-size: 13px;
+    color: #FBFBFB;
+    margin-top: 1em;
+}
+
+/*--------------------------
+BENEFITS MEDIA
+---------------------------*/
+
+@media (max-width: 1140px) {
+    .container_benefits {
+        flex-direction: column;
+        max-width: 360px;
+        gap: 48px;
+        padding-top: 3em;
+        padding-bottom: 4em;
+        height: 610px;
+    }
+
+    .block_benefits {
+        width: 100%;
+    }
+}
+
+/*--------------------------
+SUBSCRIBE LAYOUT
+---------------------------*/
+
+.subscribe_wrapper {
+    background-image: url(img/subscribe_bg.jpg);
+    background-position: left;
+    filter: opacity(25%);
+    height: 448px;
+}
+
+.container_subscribe {
+    display: flex;
+}
+

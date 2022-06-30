@@ -109,13 +109,12 @@ DROP DOWN MENU
     width: 232px;
     margin-top: 1.45em;
     display: none;
+    z-index:1;
 }
 
 .dropdown_item {
     display: block;
 }
-
-
 
 
 /*--------------------------
@@ -413,7 +412,7 @@ FEATURED ITEMS TYPOGRAPHY
 }
 
 .container_add_box {
-    display: flex;
+    display: none;
     position: absolute;
     align-self: center;
     top: 188px;
@@ -438,6 +437,10 @@ FEATURED ITEMS TYPOGRAPHY
 
 .add_box:hover {
     box-shadow: 0 0 10px #fff;
+}
+
+.product_item:hover .container_add_box{
+    display: flex;
 }
 
 /*--------------------------
@@ -597,12 +600,155 @@ SUBSCRIBE LAYOUT
 
 .subscribe_wrapper {
     background-image: url(img/subscribe_bg.jpg);
-    background-position: left;
+    background-position: center;
+    background-repeat: no-repeat;
     filter: opacity(25%);
     height: 448px;
 }
 
 .container_subscribe {
-    display: flex;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    text-align: center;
+    align-items: center;
 }
 
+.block_quotes,
+.block_subscribe {
+    margin-top: -5em;
+}
+
+/*--------------------------
+SUBSCRIBE TYPOGRAPHY
+---------------------------*/
+
+.quote_text {
+    margin-top: 2em;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #222;
+}
+
+.quote_text_span {
+    font-style:  italic;
+}
+
+.subscribe_title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: #222;
+    margin-bottom: .4em;
+}
+
+.subscribe_text {
+    font-style: normal;
+    font-size: 20px;
+    color: #222;
+}
+
+.subscribe_form {
+margin-top: 2em;
+}
+
+.enter_email_form {
+    background: #E1E1E1;
+    border-radius: 15px 0 0 15px;
+    padding: .8em 64px .8em 22px;
+    font-size: 14px;
+    color: #222224; 
+}
+
+.button_subscribe {
+    background: #F16D7F;
+    border-radius: 0 15px 15px 0;
+    padding: .8em;
+    margin-left: -.6em;
+    font-size: 14px;
+    color: #f0e9e9; 
+}
+
+/*--------------------------
+SUBSCRIBE LAYOUT MEDIA
+---------------------------*/
+
+@media (max-width: 768px) {
+    .container_subscribe {
+        min-height: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .block_quotes,
+    .block_subscribe {
+        margin-top: .5em;
+    }
+
+    .subscribe_form {
+        margin-top: 1em;
+    }
+}
+
+
+/*--------------------------
+FOOTER LAYOUT
+---------------------------*/
+
+.footer_wrapper {
+    background-color: #222224;
+}
+
+.container_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 79px;
+}
+
+.social_link {
+    display: flex;
+    gap: .5em;
+}
+
+/*--------------------------
+FOOTER TYPOGRAPHY
+---------------------------*/
+
+.copy_rights_text {   
+    font-size: 16px;
+    color: #FBFBFB;
+}
+
+.fa-brands {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.fa-brands:hover {
+    color: #F16D7F;
+}
+
+/*--------------------------
+FOOTER MEDIA
+---------------------------*/
+
+@media (max-width: 1140px)and (min-width: 769px) {
+  .container_footer {
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+    .container_footer {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 2.68em;
+        padding-bottom: 1em;
+        height: 143px;
+    }
+}

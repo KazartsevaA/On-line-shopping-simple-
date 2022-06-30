@@ -1,0 +1,245 @@
+
+/*------------------------
+BREADCRUMB LAYOUT
+-----------------------*/
+
+.container_breadcrumb {
+    min-height: 148px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.breadcrumd_list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*-----------------------
+BREADCRUMB TYPOGRAPHY
+-----------------------*/
+
+.breadcrumd_title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #F16D7F;
+}
+
+.breadcrumd_item {
+    font-style: normal;
+    font-weight: 300;
+        font-size: 14px;
+    color: #636363;
+    padding: .5em;
+}
+
+.breadcrumd_item:hover {
+    color: #F16D7F;
+}
+
+.breadcrumd_list li:first-child::after {
+    content: " / ";
+  }
+
+  .breadcrumd_list li:nth-child(2n)::after {
+    content: " / ";
+  }
+
+
+/*-----------------------
+BREADCRUMB MEDIA
+-----------------------*/
+
+@media (max-width: 768px) {
+    .container_breadcrumb {
+       display: flex;
+       flex-direction: column-reverse;
+       justify-content: center;
+       gap: 2em;
+    }
+}
+
+@media (max-width: 1140px) and (min-width: 769px)  {
+    .container_breadcrumb {
+        margin:  0 1em;
+    }
+}
+
+
+/*------------------------
+FILTER LAYOUT
+-----------------------*/
+
+.container_filter {
+    display: grid;
+    grid-template-columns: 365px auto;
+    grid-template-rows: 68px;
+    gap: 1.5em;
+    
+}
+
+.filter_left, .filter_right {
+    margin-top: 39px;
+    
+}
+
+.filter_link{
+    display: flex;
+    align-items:center;    
+}
+
+.filter_list {
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.filter_list_sm {
+    display: flex;
+    padding-top: 1em;
+}
+
+.filter_dropdown {
+    position: absolute;
+    z-index:1;
+    background-color: #fff;
+    width: 100%;
+    display: none;
+    box-shadow: 0px 41px 42px 11px #E6E4E4;
+}
+
+.filter_item {
+    display: block;
+}
+
+.filter_list:hover .filter_title {
+    color:#F16D7F;
+}
+
+.filter_list:hover{
+    box-shadow: 0px -26px 42px 11px #E6E4E4;;
+}
+
+.filter_list:hover .filter_dropdown {
+    display: block;
+}
+
+.filter_sm_item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+    text-transform: uppercase;
+    margin-right: 1.75em;
+    position: relative;
+}
+
+.filter_sm_img {
+    margin-left: .625em;
+}
+
+.size_dropdown {
+    position:absolute;
+    z-index: 1;
+    width:79px;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    background-color:#fff;
+}
+
+.size_item {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    cursor: pointer;
+    padding: 0.56em 0 0.56em 0.56em;   
+}
+
+input {
+    margin-right: .56em;
+}
+
+/*------------------------
+FILTER TYPOGRAPHY
+-----------------------*/
+.filter_link {
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.filter_title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+    text-transform: uppercase;
+    margin-right: .87em;
+}
+
+.rectangle_small {
+    margin-right: 1em;
+    float: left;
+    background-color: #F16D7F;
+    width: 5px;
+    height: 37px;
+}
+
+summary {
+    font-weight: 400;
+    font-size: 14px;
+    color:#6F6E6E;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+summary:hover {
+    color:#F16D7F;
+}
+
+.filter_item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+    padding-left: 2.1em;
+    padding-bottom: 0.68em;
+}
+
+.filter_item:hover {
+    color:#F16D7F;
+}
+
+.details_list:first-child {
+    padding-top: 1.5em;
+}
+
+.details_list:last-child {
+    padding-bottom: 1.5em;
+}
+
+
+
+/*------------------------
+FILTER MEDIA
+-----------------------*/
+
+@media (max-width: 1140px) {
+    .container_filter {
+        display: flex; 
+        margin:  0 1em;
+        justify-content: space-between;  
+    }
+    .filter_right,
+    .filter_left {
+        display: flex; 
+    }
+}
+
+
+.container_featured {
+    
+    margin-top: 67px;
+  }

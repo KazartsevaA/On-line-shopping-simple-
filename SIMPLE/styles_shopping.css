@@ -1,0 +1,139 @@
+/*------------------------
+BREADCRUMB LAYOUT
+-----------------------*/
+
+.container_breadcrumb {
+    min-height: 148px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.breadcrumd_list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*-----------------------
+BREADCRUMB TYPOGRAPHY
+-----------------------*/
+
+.breadcrumd_title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #F16D7F;
+}
+
+.breadcrumd_item {
+    font-style: normal;
+    font-weight: 300;
+        font-size: 14px;
+    color: #636363;
+    padding: .5em;
+}
+
+.breadcrumd_item:hover {
+    color: #F16D7F;
+}
+
+.breadcrumd_list li:first-child::after {
+    content: " / ";
+  }
+
+  .breadcrumd_list li:nth-child(2n)::after {
+    content: " / ";
+  }
+
+
+/*-----------------------
+BREADCRUMB MEDIA
+-----------------------*/
+
+@media (max-width: 768px) {
+    .container_breadcrumb {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       gap: 2em;
+    }
+}
+
+@media (max-width: 1140px) and (min-width: 769px)  {
+    .container_breadcrumb {
+        margin:  0 1em;
+    }
+}
+
+/*-----------------------
+SHOPING CART LAYOUT MEDIA
+-----------------------*/
+
+.container_shopping_cart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 96px;
+}
+
+.cart_item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart_button_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1140px) and (min-width: 769px)  {
+    .container_shopping_cart {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1em;
+        margin-top: 96px;
+    }
+
+    .cart_button_wrapper {
+        justify-content: center;
+    }
+
+    .shoping_cart_right {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .container_shopping_cart {
+        flex-direction: column;
+        margin: 0 1em;
+        margin-top: 96px;
+    }
+
+}
+
+
+/*-----------------------
+SHOPING CART TYPOGRAPHY
+-----------------------*/
+
+.cart_item {
+    box-shadow:17px 19px 24px rgba(0, 0, 0, 0.13);
+    margin-bottom: 40px;
+}
+
+.cart_item_title {
+    font-weight: 600;
+    font-size: 24px;
+    color: #222222;
+}
+
+.cart_item_details li {
+    font-weight: 400;
+    font-size: 22px;
+    color: #575757;
+}
+
+.cart_item_details span {
+    color: #EF5B70;
+}

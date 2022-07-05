@@ -111,6 +111,53 @@ SHOPING CART TYPOGRAPHY
     margin-right: 1.37em
 }
 
+.shoping_cart_right {
+    width: 360px;
+}
+
+.adress_title {
+    font-weight: 300;
+    font-size: 18px;
+    color: #222222;
+}
+
+.adress_input {
+    border: 2px solid #A4A4A4;
+    margin-top:20px;
+    height: 45px;
+    padding: 13px 0 16px 17px;
+}
+
+.get_quote {
+    width: 101px;
+    height: 35px;
+    border: 2px solid #A4A4A4;
+    margin-top: 34px;
+    font-size: 11px;
+    background-color: #FFFFFF;
+}
+
+.get_quote:hover {
+    background-color: #F16D7F;
+}
+
+.shoping_cart_total {
+    background: #F5F3F3;
+    margin-top: 57px;
+    width: 360px;   
+    color:#4A4A4A;
+}
+
+.sub_total_text {
+    padding-top: 39px;
+    padding-bottom: 12px;
+}
+
+.grand_total_text,
+.sub_total_text {
+    padding-right: 34px;
+}
+
 /*-----------------------
 SHOPING CART LAYOUT MEDIA
 -----------------------*/
@@ -129,6 +176,12 @@ SHOPING CART LAYOUT MEDIA
 .cart_button_wrapper {
     display: flex;
     justify-content: space-between;
+}
+
+.sub_total_text,
+.grand_total_text {
+    display: flex;
+    justify-content: flex-end;
 }
 
 @media (max-width: 1140px) and (min-width: 769px)  {
@@ -186,6 +239,16 @@ SHOPING CART LAYOUT MEDIA
         margin: 1.37em 0 3.8em 2em;
     }
 }   
+
+@media (max-width: 440px) {
+    .cart_item {
+        height: 188px;
+    }
+
+    .cart_item img {
+        width:40%;
+    }
+}
 
 
 
